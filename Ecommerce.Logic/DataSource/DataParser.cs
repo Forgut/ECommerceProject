@@ -26,7 +26,9 @@ namespace Ecommerce.Logic.DataSource
         {
             string textFile = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\ECommerce.Logic\DataSource\", "Items.txt"); //todo cleanup
             var items = new List<Item>();
-            if (File.Exists(textFile))
+            if (!File.Exists(textFile))
+                throw new FileNotFoundException();
+            else
                 foreach (var line in File.ReadAllLines(textFile))
                 {
                     var item = ParseLine(line);
