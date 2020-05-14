@@ -127,6 +127,10 @@
     <Content Include="Content\Pictures\cymbal.jpg" />
     <Content Include="Content\Pictures\destylator.jpg" />
     <Content Include="Content\Pictures\franciszek.jpg" />
+    <Content Include="Content\Pictures\kremowka.jpg" />
+    <Content Include="Content\Pictures\kubek.jpg" />
+    <Content Include="Content\Pictures\noz.jpg" />
+    <Content Include="Content\Pictures\walek.jpg" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\Style.css" />
     <Content Include="Database\Model.Context.tt">

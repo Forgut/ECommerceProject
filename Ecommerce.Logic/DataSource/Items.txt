@@ -3,3 +3,7 @@
 2;Cymbałki;To są cymbałki;25,00;cymbal.jpg
 3;Destylator;To jest destylator;20,00;destylator.jpg
 4;Ekologiczny płyn;To jest ekologiczny płyn;20,00;franciszek.jpg
+5;Kremówka;To jest kremówka płyn;21,00;kremowka.jpg
+6;Wałek;To jest wałek płyn;6,00;walek.jpg
+7;Kubek;To jest kubek płyn;125,00;kubek.jpg
+8;Nóż;To jest nóż płyn;225,32;noz.jpg

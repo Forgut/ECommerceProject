@@ -4,14 +4,14 @@
     ViewBag.Title = "View";
 }
 
-<h2>View</h2>
+<h2>Super sklep</h2>
 
 <div style="display: flex; flex-direction: row; flex-wrap: wrap">
     @foreach (var item in Model.Items)
     {
         <button id="@item.ID" class="item-box" onclick="window.location.href='@Url.Action("Index", "Item", new { id = item.ID })'" >
             <img src="~/Content/Pictures/@item.PhotoName" class="in-box-picture" />
-            @item.Name
+            @item.Name (@item.Price zł/szt.)
         </button>
     }
 </div>
