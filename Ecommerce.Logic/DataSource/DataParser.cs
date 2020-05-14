@@ -24,7 +24,7 @@ namespace Ecommerce.Logic.DataSource
 
         private static IEnumerable<Item> GetItemsFromCSV()
         {
-            string textFile = "Items.csv";
+            string textFile = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\ECommerce.Logic\DataSource\", "Items.txt"); //todo cleanup
             var items = new List<Item>();
             if (File.Exists(textFile))
                 foreach (var line in File.ReadAllLines(textFile))
