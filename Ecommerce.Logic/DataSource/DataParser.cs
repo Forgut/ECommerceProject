@@ -3,6 +3,7 @@ using NLog;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Text;
 
 namespace ECommerce.Logic.DataSource
@@ -11,6 +12,11 @@ namespace ECommerce.Logic.DataSource
     {
         private static IEnumerable<Item> _items;
         private static Logger _logger = LogManager.GetCurrentClassLogger();
+       
+        public static Item GetItemByID(int id)
+        {
+            return Items.FirstOrDefault(x => x.ID == id);
+        }
 
         public static IEnumerable<Item> Items
         {

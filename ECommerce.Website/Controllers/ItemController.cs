@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ECommerce.Logic.DataSource;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,9 +9,12 @@ namespace ECommerce.Website.Controllers
 {
     public class ItemController : Controller
     {
-        public ActionResult Index()
+        public ActionResult Index(int id)
         {
-            return View();
+            var item = DataParser.GetItemByID(id);
+            if (item == null)
+                throw new KeyNotFoundException();
+            return View(item);
         }
     }
 }

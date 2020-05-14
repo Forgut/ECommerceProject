@@ -1,7 +1,9 @@
-﻿@model = ECommerce.Logic.Objects.ShoppingCart
+﻿@model ECommerce.Logic.Objects.Item
 @{
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>@Model.Name</h2>
+<p>@Model.Description</p>
+<p>@Model.Price</p>
 
