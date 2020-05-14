@@ -6,12 +6,12 @@
 
 <h2>@Model.Name</h2>
 <p>@Model.Description</p>
-<p>@Model.Price</p>
+<p>Cena: @Model.Price</p>
 
 <div id="shopping_card" style="display: flex; flex-direction: row; width: 20%">
     <button id="add" class="add-button">+</button>
-    <div id="cart-amount" class="left-right-padding">
-        <p> In cart: @ShoppingCart.HowManyInCart(Model.ID) </p>
+    <div id="cart-amount" class="left-right-margin">
+        <p> W koszyku: @ShoppingCart.HowManyInCart(Model.ID) </p>
     </div>
     <button id="remove" class="remove-button">-</button>
 </div>
