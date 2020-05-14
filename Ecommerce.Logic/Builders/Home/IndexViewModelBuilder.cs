@@ -11,7 +11,7 @@ namespace Ecommerce.Logic.Builders.Home
         {
             return new IndexViewModel()
             {
-                Items = new List<ItemViewModel>() { new ItemViewModel() { Name = "Awokado" }, new ItemViewModel() { Name = "Bolero" }, new ItemViewModel() { Name = "Cymbałki" } }
+                Items = DataSource.DataParser.Items
             };
         }
     }

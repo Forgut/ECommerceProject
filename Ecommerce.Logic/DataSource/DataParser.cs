@@ -7,12 +7,12 @@ using System.Text;
 
 namespace Ecommerce.Logic.DataSource
 {
-    public class DataParser
+    public static class DataParser
     {
-        private IEnumerable<Item> _items;
-        private Logger _logger = LogManager.GetCurrentClassLogger();
+        private static IEnumerable<Item> _items;
+        private static Logger _logger = LogManager.GetCurrentClassLogger();
 
-        public IEnumerable<Item> Items
+        public static IEnumerable<Item> Items
         {
             get
             {
@@ -22,7 +22,7 @@ namespace Ecommerce.Logic.DataSource
             }
         }
 
-        private IEnumerable<Item> GetItemsFromCSV()
+        private static IEnumerable<Item> GetItemsFromCSV()
         {
             string textFile = "Items.csv";
             var items = new List<Item>();
@@ -36,7 +36,7 @@ namespace Ecommerce.Logic.DataSource
             return items;
         }
 
-        private Item ParseLine(string line)
+        private static Item ParseLine(string line)
         {
             try
             {

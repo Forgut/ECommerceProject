@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Ecommerce.Logic.Objects;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -9,8 +10,8 @@ namespace ECommerce.Logic.Models.Home
     {
         public IndexViewModel()
         {
-            Items = new List<ItemViewModel>();
+            Items = new List<Item>();
         }
-        public IEnumerable<ItemViewModel> Items { get; set; }
+        public IEnumerable<Item> Items { get; set; }
     }
 }
