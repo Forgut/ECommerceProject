@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Ecommerce.Logic.Objects
+namespace ECommerce.Logic.Objects
 {
     public class Item
     {

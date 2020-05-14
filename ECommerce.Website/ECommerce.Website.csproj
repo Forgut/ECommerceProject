@@ -163,6 +163,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ItemController.cs" />
     <Compile Include="Database\Model.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -199,6 +200,7 @@
     <Content Include="Views\web.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+    <Content Include="Views\Item\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -211,9 +213,9 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Ecommerce.Logic\Ecommerce.Logic.csproj">
+    <ProjectReference Include="..\Ecommerce.Logic\ECommerce.Logic.csproj">
       <Project>{7741959e-9982-4e6c-994d-1e0da99eb9e2}</Project>
-      <Name>Ecommerce.Logic</Name>
+      <Name>ECommerce.Logic</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Ecommerce.Logic.Builders.Home
+namespace ECommerce.Logic.Builders.Home
 {
     public class IndexViewModelBuilder
     {

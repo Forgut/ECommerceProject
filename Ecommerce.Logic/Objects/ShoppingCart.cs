@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Ecommerce.Logic.Objects
+namespace ECommerce.Logic.Objects
 {
     public class ShoppingCart
     {
-        public ShoppingCart(IEnumerable<Item> items)
+        public ShoppingCart(IEnumerable<Item> items = null)
         {
             Items = items;
         }

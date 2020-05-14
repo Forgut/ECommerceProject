@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.29806.167
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerce.Website", "ECommerce.Website\ECommerce.Website.csproj", "{70986FAD-E30D-46CA-9E23-E99300580C32}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ecommerce.Logic", "Ecommerce.Logic\Ecommerce.Logic.csproj", "{7741959E-9982-4E6C-994D-1E0DA99EB9E2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ECommerce.Logic", "Ecommerce.Logic\ECommerce.Logic.csproj", "{7741959E-9982-4E6C-994D-1E0DA99EB9E2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

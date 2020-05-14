@@ -1,11 +1,11 @@
-﻿using Ecommerce.Logic.Objects;
+﻿using ECommerce.Logic.Objects;
 using NLog;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
-namespace Ecommerce.Logic.DataSource
+namespace ECommerce.Logic.DataSource
 {
     public static class DataParser
     {
