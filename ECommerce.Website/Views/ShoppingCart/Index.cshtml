@@ -7,13 +7,24 @@
 
 @foreach (var item in ShoppingCart.Items)
 {
-    <div>
-        @item.Name : @item.Amount (@item.Price za szt.) Suma: @item.TotalPrice
+    <div style="display:flex; flex-direction: row">
+        <div style="width: 30px; height: 30px">
+            <img src="~/Content/Pictures/@item.PhotoName" class="in-box-picture"/>
+        </div>  
+        <div style="margin-left:10px; min-width: 120px">
+            @item.Name
+        </div>
+        <div style="min-width: 120px">
+            sztuk: @item.Amount
+        </div>
+        <div style="min-width: 120px">
+            (@item.Price za szt.) Suma: @item.TotalPrice zł
+        </div>
     </div>
 }
 
-<h2>Łącznie</h2>
-@ShoppingCart.Price zł
+<h2>Łącznie @ShoppingCart.Price zł</h2>
+
 
 <div>
     <input type="hidden" id="udf5" name="udf5" value="300746" />

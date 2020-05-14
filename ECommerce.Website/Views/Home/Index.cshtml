@@ -10,6 +10,7 @@
     @foreach (var item in Model.Items)
     {
         <button id="@item.ID" class="item-box" onclick="window.location.href='@Url.Action("Index", "Item", new { id = item.ID })'" >
+            <img src="~/Content/Pictures/@item.PhotoName" class="in-box-picture" />
             @item.Name
         </button>
     }
