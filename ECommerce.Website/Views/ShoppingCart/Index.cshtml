@@ -1,0 +1,16 @@
+﻿@using ECommerce.Logic.Objects
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Koszyk</h2>
+
+@foreach (var item in ShoppingCart.Items)
+{
+    <div>
+        @item.Name : @item.Amount (@item.Price za szt.) Suma: @item.TotalPrice
+    </div>
+}
+
+<h2>Łącznie</h2>
+@ShoppingCart.Price zł

@@ -9,6 +9,11 @@ namespace ECommerce.Website.Controllers
 {
     public class ShoppingCartController : Controller
     {
+        [HttpGet]
+        public ActionResult Index()
+        {
+            return View();
+        }
         [HttpPost]
         public ActionResult AddToCart(int id)
         {
