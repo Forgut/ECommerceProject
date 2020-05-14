@@ -1,4 +1,5 @@
-﻿@model ECommerce.Logic.Objects.Item
+﻿@using ECommerce.Logic.Objects
+@model ECommerce.Logic.Objects.Item
 @{
     ViewBag.Title = "Index";
 }
@@ -7,3 +8,36 @@
 <p>@Model.Description</p>
 <p>@Model.Price</p>
 
+<div id="shopping_card" style="display: flex; flex-direction: row; width: 20%">
+    <button id="add" class="add-button">+</button>
+    <div id="cart-amount" class="left-right-padding">
+        <p> In cart: @ShoppingCart.HowManyInCart(Model.ID) </p>
+    </div>
+    <button id="remove" class="remove-button">-</button>
+</div>
+
+@section Scripts {
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $("#add").click(function () {
+                $.post({
+                    url: '@Url.Action("AddToCart", "ShoppingCart")',
+                    data: { id: @Model.ID },
+                })
+                ReloadCartAmonut();
+            });
+            $("#remove").click(function () {
+                $.post({
+                    url: '@Url.Action("RemoveFromCart", "ShoppingCart")',
+                    data: { id: @Model.ID },
+                })
+                ReloadCartAmonut();
+            });
+        })
+
+        function ReloadCartAmonut() {
+            $("#cart-amount").load(location.href+" #cart-amount>*","");
+        }
+    </script>
+}

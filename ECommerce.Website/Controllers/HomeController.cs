@@ -12,12 +12,10 @@ namespace ECommerce.Website.Controllers
 {
     public class HomeController : Controller
     {
-        private ShoppingCart _shoppingCart;
         public ActionResult Index()
         {
             var builder = new IndexViewModelBuilder();
             var model = builder.GetIndexViewModel();
-            _shoppingCart = new ShoppingCart(); //todo read from cache
             return View(model);
         }
     }

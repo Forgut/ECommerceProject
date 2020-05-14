@@ -1,0 +1,22 @@
+﻿.add-button {
+    width:auto;
+    max-width: 100%;
+    height:100%;
+    background-color:lightblue;
+    color:black;
+    font-weight: bold;
+}
+
+.remove-button {
+    width: auto;
+    max-width: 100%;
+    height: 100%;
+    background-color: lightcoral;
+    color: black;
+    font-weight: bold;
+}
+
+.left-right-padding {
+    padding-left: 10px;
+    padding-right:10px;
+}
