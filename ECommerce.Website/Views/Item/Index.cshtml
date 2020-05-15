@@ -23,25 +23,8 @@
 @section Scripts {
     <script type="text/javascript">
         $(document).ready(function () {
-
-            $("#add").click(function () {
-                $.post({
-                    url: '@Url.Action("AddToCart", "ShoppingCart")',
-                    data: { id: @Model.ID },
-                })
-                ReloadCartAmonut();
-            });
-            $("#remove").click(function () {
-                $.post({
-                    url: '@Url.Action("RemoveFromCart", "ShoppingCart")',
-                    data: { id: @Model.ID },
-                })
-                ReloadCartAmonut();
-            });
+            AddAndRemoveButtonClicks('#cart-amount', '@Url.Action("AddToCart","ShoppingCart")','@Url.Action("RemoveFromCart", "ShoppingCart")', @Model.ID );
         })
 
-        function ReloadCartAmonut() {
-            $("#cart-amount").load(location.href+" #cart-amount>*","");
-        }
     </script>
 }
