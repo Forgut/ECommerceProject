@@ -1,21 +1,21 @@
 ﻿
-function AddAndRemoveButtonClicks(cart_amount_id, add_url, remove_url, item_id) {
-    $("#add").click(function () {
+function AddAndRemoveButtonClicks(add_url, remove_url, item_id) {
+    $("#add-"+item_id).click(function () {
         $.post({
             url: add_url,
-            data: { id: item_id },
+            data: { id: item_id }
         });
-        ReloadCartAmonut(cart_amount_id);
+        ReloadDiv("#cart-amount-"+item_id);
     });
-    $("#remove").click(function () {
+    $("#remove-"+item_id).click(function () {
         $.post({
             url: remove_url,
-            data: { id: item_id },
+            data: { id: item_id }
         });
-        ReloadCartAmonut(cart_amount_id);
+        ReloadDiv("#cart-amount-"+item_id);
     });
 }
 
-function ReloadCartAmonut(cart_amount_id) {
-    $(cart_amount_id).load(location.href + " " + cart_amount_id + ">*", "");
+function ReloadDiv(div_id) {
+    $(div_id).load(location.href + " " + div_id + ">*", "");
 }

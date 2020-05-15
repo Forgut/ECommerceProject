@@ -14,12 +14,10 @@
 
 @Html.Partial("CartAddRemovePartial", Model.ID)
 
-
 @section Scripts {
     <script type="text/javascript">
         $(document).ready(function () {
-            AddAndRemoveButtonClicks('#cart-amount', '@Url.Action("AddToCart","ShoppingCart")','@Url.Action("RemoveFromCart", "ShoppingCart")', @Model.ID );
+            AddAndRemoveButtonClicks('@Url.Action("AddToCart","ShoppingCart")','@Url.Action("RemoveFromCart", "ShoppingCart")', @Model.ID );
         })
-
     </script>
 }
