@@ -12,13 +12,8 @@
 <p>@Model.Description</p>
 <p>Cena: @Model.Price</p>
 
-<div id="shopping_card" style="display: flex; flex-direction: row; width: 20%">
-    <button id="add" class="add-button">+</button>
-    <div id="cart-amount" class="left-right-margin">
-        <p> W koszyku: @ShoppingCart.HowManyInCart(Model.ID) </p>
-    </div>
-    <button id="remove" class="remove-button">-</button>
-</div>
+@Html.Partial("CartAddRemovePartial", Model.ID)
+
 
 @section Scripts {
     <script type="text/javascript">

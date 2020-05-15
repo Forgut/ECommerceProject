@@ -1,0 +1,9 @@
+﻿@using ECommerce.Logic.Objects
+@model int
+<div id="shopping_card" style="display: flex; flex-direction: row; width: 20%">
+    <button id="add" class="add-button">+</button>
+    <div id="cart-amount" class="left-right-margin">
+        <p> W koszyku: @ShoppingCart.HowManyInCart(Model) </p>
+    </div>
+    <button id="remove" class="remove-button">-</button>
+</div>

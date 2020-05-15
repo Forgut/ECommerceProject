@@ -214,6 +214,7 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
     <Content Include="Views\Item\Index.cshtml" />
     <Content Include="Views\ShoppingCart\Index.cshtml" />
+    <Content Include="Views\Shared\CartAddRemovePartial.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
