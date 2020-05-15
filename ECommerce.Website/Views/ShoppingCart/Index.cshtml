@@ -45,16 +45,16 @@
     <script type="text/javascript">
         $(document).ready(function () {
             $('.add-button').click(function () {
-                ReloadDiv('#sum-price')
+                reload_div('#sum-price')
             })
             $('.remove-button').click(function () {
-                ReloadDiv('#sum-price')
+                reload_div('#sum-price')
             })
 
             @foreach(var item in ShoppingCart.Items)
             {
                 <text>
-            AddAndRemoveButtonClicks('@Url.Action("AddToCart","ShoppingCart")', '@Url.Action("RemoveFromCart", "ShoppingCart")', @item.ID);
+                    add_and_remove_button_clicks('@Url.Action("AddToCart","ShoppingCart")', '@Url.Action("RemoveFromCart", "ShoppingCart")', @item.ID);
                 </text>
             }
         })

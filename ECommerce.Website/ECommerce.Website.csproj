@@ -130,6 +130,7 @@
     <Content Include="Content\Pictures\kremowka.jpg" />
     <Content Include="Content\Pictures\kubek.jpg" />
     <Content Include="Content\Pictures\noz.jpg" />
+    <Content Include="Content\Pictures\shoppingCart.png" />
     <Content Include="Content\Pictures\walek.jpg" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\Style.css" />

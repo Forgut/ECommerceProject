@@ -9,9 +9,20 @@
 <div style="display: flex; flex-direction: row; flex-wrap: wrap">
     @foreach (var item in Model.Items)
     {
-        <button id="@item.ID" class="item-box" onclick="window.location.href='@Url.Action("Index", "Item", new { id = item.ID })'" >
-            <img src="~/Content/Pictures/@item.PhotoName" class="in-box-picture" />
+        <button id="item-box-@item.ID" class="item-box" onclick="window.location.href='@Url.Action("Index", "Item", new { id = item.ID })'">
+            <img id="img-box-@item.ID" src="~/Content/Pictures/@item.PhotoName" class="in-box-picture" />
             @item.Name (@item.Price zł/szt.)
         </button>
     }
 </div>
+
+@section Scripts{
+    <script type="text/javascript">
+    @foreach (var item in Model.Items)
+    {
+        <text>
+            highlight_div('#item-box-@item.ID')
+        </text>
+    }
+    </script>
+}

@@ -4,12 +4,16 @@
     ViewBag.Title = "Index";
 }
 
-<h2>@Model.Name</h2>
 
-<div style="width: 300px; height: 300px">
-    <img src="~/Content/Pictures/@Model.PhotoName" class="in-box-picture" />
-</div>
-<p>@Model.Description</p>
+    <div style="display: flex; flex-direction: row">
+        <div style="width: 300px; height: 300px">
+            <img src="~/Content/Pictures/@Model.PhotoName" class="in-box-picture" />
+        </div>
+        <div style="max-width: 600px">
+            <h1>@Model.Name</h1>
+            <p>@Model.Description</p>
+        </div>
+    </div>
 <p>Cena: @Model.Price</p>
 
 @Html.Partial("CartAddRemovePartial", Model.ID)
@@ -17,7 +21,7 @@
 @section Scripts {
     <script type="text/javascript">
         $(document).ready(function () {
-            AddAndRemoveButtonClicks('@Url.Action("AddToCart","ShoppingCart")','@Url.Action("RemoveFromCart", "ShoppingCart")', @Model.ID );
+            add_and_remove_button_clicks('@Url.Action("AddToCart","ShoppingCart")','@Url.Action("RemoveFromCart", "ShoppingCart")', @Model.ID );
         })
     </script>
 }
