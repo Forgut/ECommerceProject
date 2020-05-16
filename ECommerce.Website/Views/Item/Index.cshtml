@@ -4,20 +4,21 @@
     ViewBag.Title = "Index";
 }
 
-
+<div class="items-field">
     <div style="display: flex; flex-direction: row">
-        <div style="width: 300px; height: 300px">
-            <img src="~/Content/Pictures/@Model.PhotoName" class="in-box-picture" />
+        <div style="width: 300px; height: 300px;">
+            <img src="~/Content/Pictures/@Model.PhotoName" class="in-box-picture" style="border: solid 3px" />
         </div>
-        <div style="max-width: 600px">
+        <div style="max-width: 600px; margin-left: 20px">
             <h1>@Model.Name</h1>
             <p>@Model.Description</p>
         </div>
     </div>
-<p>Cena: @Model.Price</p>
+    <p>Cena: @Model.Price</p>
 
-@Html.Partial("CartAddRemovePartial", Model.ID)
+    @Html.Partial("CartAddRemovePartial", Model.ID)
 
+</div>
 @section Scripts {
     <script type="text/javascript">
         $(document).ready(function () {

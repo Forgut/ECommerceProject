@@ -5,6 +5,7 @@
     background-color:lightblue;
     color:black;
     font-weight: bold;
+    border-radius: 3px;
 }
 
 .remove-button {
@@ -14,6 +15,7 @@
     background-color: lightcoral;
     color: black;
     font-weight: bold;
+    border-radius: 3px;
 }
 
 .left-right-padding {
@@ -33,13 +35,15 @@
     height: 350px;
     float: left;
     margin: 0.5%;
-    background-color: white;
+    background-color: rebeccapurple;
+    border-radius: 25px;
 }
 
 .in-box-picture {
     width: 100%;
     height: 90%;
-    object-fit:contain;
+    object-fit: cover;
+    border-radius: 25px;
 }
 
 .border-solid {
@@ -50,4 +54,19 @@
     background-color: aqua;
     width:100%;
     height:5%;
+}
+
+.background-image {
+    background-position: center center;
+    background-image: url('Pictures/city.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.items-field {
+    background-color: #333333;
+    margin-top: 50px;
+    border-radius: 25px;
+    padding: 1%;
+    background: linear-gradient(to right, #333333, #332233)
 }

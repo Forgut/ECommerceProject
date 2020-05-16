@@ -3,27 +3,30 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Koszyk</h2>
-@foreach (var item in ShoppingCart.Items)
-{
-    <div style="display:flex; flex-direction: row;">
-        <div style="width: 30px; height: 30px">
-            <img src="~/Content/Pictures/@item.PhotoName" class="in-box-picture" />
+<div class="items-field">
+    <h2>Koszyk</h2>
+    @foreach (var item in ShoppingCart.Items)
+    {
+        <div style="display:flex; flex-direction: row;">
+            <div style="width: 30px; height: 30px">
+                <img src="~/Content/Pictures/@item.PhotoName" class="in-box-picture" style="border: 1px solid;" />
+            </div>
+            <div style="margin-left:10px; min-width: 120px">
+                @item.Name
+            </div>
+            @Html.Partial("CartAddRemovePartial", item.ID)
+            <div style="min-width: 120px">
+                (@item.Price za szt.) Suma: @item.TotalPrice zł
+            </div>
         </div>
-        <div style="margin-left:10px; min-width: 120px">
-            @item.Name
-        </div>
-        @Html.Partial("CartAddRemovePartial", item.ID)
-        <div style="min-width: 120px">
-            (@item.Price za szt.) Suma: @item.TotalPrice zł
-        </div>
+    }
+
+
+    <div id="sum-price">
+        <h2>Łącznie @ShoppingCart.Price zł</h2>
     </div>
-}
 
-<div id="sum-price">
-    <h2>Łącznie @ShoppingCart.Price zł</h2>
 </div>
-
 <div>
     <input type="hidden" id="udf5" name="udf5" value="300746" />
     <input type="hidden" id="surl" name="surl" value="f33cbcba1c5293b25771787bba818067" />

@@ -124,6 +124,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Pictures\avocado.jpg" />
     <Content Include="Content\Pictures\bez.png" />
+    <Content Include="Content\Pictures\city.jpg" />
     <Content Include="Content\Pictures\cymbal.jpg" />
     <Content Include="Content\Pictures\destylator.jpg" />
     <Content Include="Content\Pictures\franciszek.jpg" />
