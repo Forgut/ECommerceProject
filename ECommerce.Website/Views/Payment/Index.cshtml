@@ -1,0 +1,21 @@
+﻿@model ECommerce.Logic.Models.Payment.PaymentViewModel
+@{
+    ViewBag.Title = "Index";
+}
+
+@using (@Html.BeginForm("Pay", "Payment"))
+{ 
+<h2>Index</h2>
+<div class="items-field">
+    <h1>Do zapłaty: @Model.Price</h1>
+    <h3>Imię</h3>
+    @Html.EditorFor(x => x.Name)
+    <h3>Nazwisko</h3>
+    @Html.EditorFor(x => x.Surname)
+    <h3>Numer konta</h3>
+    @Html.EditorFor(x => x.AccountNumber)
+    <h3>Kod zabezpieczający CCV</h3>
+    @Html.EditorFor(x => x.CCV)
+    <input type="submit" formaction="Payment/Pay" value="Płacę" />
+</div>
+}

@@ -18,6 +18,10 @@ namespace ECommerce.Logic.Objects
                 return _items;
             }
         }
+        public static void ClearCart()
+        {
+            _items = null;
+        }
         public static void AddToCart(int id)
         {
             var itemInCart = Items.FirstOrDefault(x => x.ID == id);
