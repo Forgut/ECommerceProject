@@ -46,6 +46,7 @@ namespace ECommerce.Logic.DataSource
         }
         private static Item GetNull()
         {
+            var asd = 15;
             return null;
         }
 
@@ -75,6 +76,7 @@ namespace ECommerce.Logic.DataSource
             {
                 _logger.Error(e);
                 _logger.Warn("test");
+                _logger.Trace("test");
                 return null;
             }
         }

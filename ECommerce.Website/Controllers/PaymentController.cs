@@ -19,7 +19,6 @@ namespace ECommerce.Website.Controllers
         }
         public ActionResult Pay(PaymentViewModel model)
         {
-            //here would be payment logic
             ShoppingCart.ClearCart();
             return RedirectToAction(nameof(this.ThankYouPage));
         }
