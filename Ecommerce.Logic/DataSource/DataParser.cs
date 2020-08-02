@@ -70,7 +70,7 @@ namespace ECommerce.Logic.DataSource
             catch (Exception e)
             {
                 _logger.Error(e);
-                _logger.Info("test");
+                _logger.Debug("test");
                 return null;
             }
         }
