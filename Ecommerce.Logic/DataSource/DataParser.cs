@@ -15,7 +15,8 @@ namespace ECommerce.Logic.DataSource
        
         public static Item GetItemByID(int id)
         {
-            return Items.FirstOrDefault(x => x.ID == id);
+            var item = Items.FirstOrDefault(x => x.ID == id);
+            return item;
         }
 
         public static IEnumerable<Item> Items
