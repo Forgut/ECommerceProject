@@ -45,6 +45,11 @@ namespace ECommerce.Logic.DataSource
             return items;
         }
 
+        private static Item GetNull()
+        {
+            return null;
+        }
+
         private static Item ParseLine(string line)
         {
             try
